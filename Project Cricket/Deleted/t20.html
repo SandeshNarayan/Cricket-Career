@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>T20 Match Simulation</title>
+  <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS file for styling -->
+</head>
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <div class="match-info">
+    <h1>T20 Match Simulation</h1>
+    <p>Total Runs: <span id="totalInfo"></span></p>
+    <p>Overs: <span id="currentOver">0.0</span></p>
+    <p>Wickets: <span id="totalWickets">0</span></p>
+    <h3>Batting Team Stats:</h3>
+    <p>Current Batsman: <span id="currentBatsman"></span></p>
+    <p>Runs Scored: <span id="batsmanRuns">0</span></p>
+    <p>Balls Faced: <span id="ballsFaced">0</span></p>
+  </div>
+
+  <!-- Scorecard section for the current innings -->
+  <div class="scorecard">
+    <h2>Batting Scorecard</h2>
+    <div id="scoreList" class="score-list"></div>
+
+    <h2>Bowling Stats</h2>
+    <div id="bowlerList" class="bowler-list"></div>
+  </div>
+
+  <!-- Control section for playing balls and match navigation -->
+  <div class="controls">
+    <button id="playBall">Play Ball</button>
+    <button id="skipToPlayer">Simulate to End</button>
+    <button id="startT20">Start New Match</button>
+  </div>
+
+  <!-- End Match Message -->
+  <div id="endMessage" style="display: none;">
+    <h2>Match Ended</h2>
+    <p>Thanks for playing! Refresh the page or start a new match.</p>
+  </div>
+
+  <script src="t20.js"></script> <!-- Include the T20 match script -->
+</body>
+</html>

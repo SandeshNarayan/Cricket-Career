@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Career - Match</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="match.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Cricket Career</h1>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="match-info">
+            <h2 id="match-format">T20 Match</h2>
+            <div id="team-names">
+                <h3><span id="team1-name">Team 1</span> vs <span id="team2-name">Team 2</span></h3>
+            </div>
+            <div id="match-status">
+                <h4 id="innings-status">Innings 1 - Team 1 Batting</h4>
+                <p id="ball-status">Ball: 0.0 | Runs: 0/0 | Overs Left: 20</p>
+            </div>
+        </section>
+
+        <section class="scorecard">
+            <h3>Scorecard</h3>
+            <table id="scorecard-table">
+                <thead>
+                    <tr>
+                        <th>Batsman</th>
+                        <th>Runs</th>
+                        <th>Balls</th>
+                        <th>4s</th>
+                        <th>6s</th>
+                        <th>Strike Rate</th>
+                    </tr>
+                </thead>
+                <tbody id="batting-table">
+                    <!-- Batsman stats will be dynamically inserted here -->
+                </tbody>
+            </table>
+
+            <h4>Bowler Stats</h4>
+            <table id="bowling-table">
+                <thead>
+                    <tr>
+                        <th>Bowler</th>
+                        <th>Overs</th>
+                        <th>Runs</th>
+                        <th>Wickets</th>
+                        <th>Economy</th>
+                    </tr>
+                </thead>
+                <tbody id="bowling-stats">
+                    <!-- Bowler stats will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="action-section">
+            <button id="play-ball-button">Play Next Ball</button>
+            <button id="skip-button">Skip to My Batting</button>
+        </section>
+
+        <section class="match-summary">
+            <h3>Match Summary</h3>
+            <div id="match-summary-content">
+                <!-- Display how wickets fell, who took catches, etc. -->
+            </div>
+        </section>
+
+        <section class="innings-summary" id="innings-summary-section" style="display: none;">
+            <h3>Innings Summary</h3>
+            <p id="innings-summary-text">First Innings Summary: Team 1 scored 120/6 in 20 overs</p>
+        </section>
+
+        <section class="match-result" id="match-result-section" style="display: none;">
+            <h3>Match Result</h3>
+            <p id="match-result-text">Team 1 won by 6 wickets.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cricket Career. All rights reserved.</p>
+    </footer>
+    <script src="match.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Shot Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f3e7;
+            border-left: 5px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Select a Cricket Shot</h1>
+    
+    <label for="category-select">Select Shot Category:</label>
+    <select id="category-select" onchange="populateShotOptions()">
+        <option value="" disabled selected>Select a category</option>
+        <option value="Front Foot Shots">Front Foot Shots</option>
+        <option value="Back Foot Shots">Back Foot Shots</option>
+        <option value="Special Shots">Special Shots</option>
+        <option value="Defensive Shots">Defensive Shots</option>
+        <option value="Aggressive Shots">Aggressive Shots</option>
+    </select>
+
+    <div id="shot-container" style="display:none;">
+        <label for="shot-select">Select a Shot:</label>
+        <select id="shot-select"></select>
+        <button onclick="showShotDescription()">Play Shot</button>
+    </div>
+
+    <div id="result" class="result" style="display: none;"></div>
+</div>
+
+<script>
+    const shotOptions = {
+        "Front Foot Shots": [
+            { value: "Drive", text: "Drive" },
+            { value: "Off Drive", text: "Off Drive" },
+            { value: "On Drive", text: "On Drive" },
+            { value: "Cover Drive", text: "Cover Drive" },
+            { value: "Square Drive", text: "Square Drive" }
+        ],
+        "Back Foot Shots": [
+            { value: "Back Foot Drive", text: "Back Foot Drive" },
+            { value: "Leg Glance", text: "Leg Glance" }
+        ],
+        "Special Shots": [
+            { value: "Helicopter Shot", text: "Helicopter Shot" },
+            { value: "Switch Hit", text: "Switch Hit" },
+            { value: "Dilscoop", text: "Dilscoop" },
+            { value: "Upper Cut", text: "Upper Cut" },
+            { value: "Reverse Scoop", text: "Reverse Scoop" },
+            { value: "Inside Out Shot", text: "Inside Out Shot" }
+        ],
+        "Defensive Shots": [
+            { value: "Forward Defence", text: "Forward Defence" },
+            { value: "Back Foot Defence", text: "Back Foot Defence" }
+        ],
+        "Aggressive Shots": [
+            { value: "Pull Shot", text: "Pull Shot" },
+            { value: "Hook Shot", text: "Hook Shot" },
+            { value: "Slog", text: "Slog" }
+        ]
+    };
+
+    const descriptionMap = {
+        "Drive": "A straight-batted shot played with a vertical swing, aiming for the mid-on or mid-off region.",
+        "Off Drive": "Similar to the drive, but played towards the off-side, aiming for the mid-off or long-off region.",
+        "On Drive": "Played towards the mid-on region, aiming for the gap between mid-on and mid-wicket.",
+        "Cover Drive": "A shot played towards the cover region, aiming for the gap between cover and point.",
+        "Square Drive": "A shot played with the hands away from the body, aiming for the square leg or fine leg region.",
+        "Back Foot Drive": "A shot played with the back foot, aiming for the mid-on or mid-off region, depending on the length and line of the ball.",
+        "Leg Glance": "A shot played with a flick of the wrist, deflecting the ball towards the square leg or fine leg region.",
+        "Helicopter Shot": "A shot played with a horizontal bat swing, aiming for the mid-wicket region.",
+        "Switch Hit": "A shot played with a reverse swing, aiming for the fine leg or third man region.",
+        "Dilscoop": "A shot played with a scoop of the bat, aiming for the fine leg region.",
+        "Upper Cut": "A shot played with an upward swing, aiming for the third man region.",
+        "Reverse Scoop": "A shot played with a reverse swing, aiming for the fine leg region.",
+        "Inside Out Shot": "A shot played with an inside-out swing, aiming for the cover region.",
+        "Forward Defence": "A shot played with a forward stride, aiming to block the ball and protect the wicket.",
+        "Back Foot Defence": "A shot played with a back foot stride, aiming to block the ball and protect the wicket.",
+        "Pull Shot": "A shot played with a vertical swing, aiming for the mid-wicket region.",
+        "Hook Shot": "A shot played with a horizontal swing, aiming for the fine leg region.",
+        "Slog": "A shot played with a powerful swing, aiming for the boundary."
+    };
+
+    function populateShotOptions() {
+        const categorySelect = document.getElementById('category-select');
+        const selectedCategory = categorySelect.value;
+        const shotSelect = document.getElementById('shot-select');
+
+        // Clear previous options
+        shotSelect.innerHTML = "";
+
+        if (shotOptions[selectedCategory]) {
+            shotOptions[selectedCategory].forEach(shot => {
+                const option = document.createElement('option');
+                option.value = shot.value;
+                option.text = shot.text;
+                shotSelect.appendChild(option);
+            });
+
+            // Show the shot select container
+            document.getElementById('shot-container').style.display = 'block';
+        }
+    }
+
+    function showShotDescription() {
+        const shotSelect = document.getElementById('shot-select');
+        const selectedShot = shotSelect.value;
+        const resultDiv = document.getElementById('result');
+
+        resultDiv.innerHTML = `<strong>${selectedShot}</strong>: ${descriptionMap[selectedShot]}`;
+        resultDiv.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

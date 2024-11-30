@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Match Simulation</title>
+    <link rel="stylesheet" href="css1.css"> <!-- Link to your CSS file -->
+    <script src="js/test.js" defer></script> <!-- Link to your Test match script -->
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="logout.html">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Test Match Simulation</h1>
+        <div id="match-info">
+            <h2 id="match-title">Match Title: Team A vs Team B</h2>
+            <h3 id="innings">Innings: 1</h3>
+            <h3 id="overs-left">Overs Left: 90</h3>
+            <h3 id="runs">Runs: 0</h3>
+            <h3 id="wickets">Wickets: 0</h3>
+        </div>
+
+        <div id="scoreboard">
+            <h2>Scoreboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Batsman</th>
+                        <th>Runs</th>
+                        <th>Balls</th>
+                        <th>4s</th>
+                        <th>6s</th>
+                    </tr>
+                </thead>
+                <tbody id="scoreboard-body">
+                    <!-- Dynamic scoreboard rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="match-controls">
+            <button id="start-match">Start Match</button>
+            <button id="next-ball">Next Ball</button>
+        </div>
+
+        <div id="match-log">
+            <h2>Match Log</h2>
+            <ul id="log-list">
+                <!-- Match log messages will be displayed here -->
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cricket Career Game. All rights reserved.</p>
+    </footer>
+    <script src="test.html"></script>
+
+</body>
+</html>

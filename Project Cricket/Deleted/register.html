@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Default CSS -->
+    <link id="theme-link" rel="stylesheet" href="css/styles.css">
+    <script>
+        // Function to load a different CSS based on user type (admin/player)
+        function loadTheme() {
+            // Example condition: check if user is an admin or player
+            // You can replace this with real logic from the backend or session data
+            const userType = 'admin'; // This could be fetched dynamically based on the user login
+            
+            const themeLink = document.getElementById('theme-link');
+            
+            // If user is an admin, load the admin CSS file
+            if (userType === 'admin') {
+                themeLink.href = 'premium.css'; // Load admin-specific CSS
+            } else {
+                themeLink.href = 'css/styles.css'; // Load default player CSS
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = loadTheme;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="register-form">
+            <h1>Register</h1>
+            <form action="/register" method="POST">
+                <div class="input-box">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="input-box button">
+                    <button type="submit">Register</button>
+                </div>
+
+                <div class="option">Already have an account? <a href="/login">Login here</a></div>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/premium.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            Admin Dashboard
+        </header>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="/admin/home.html">Home</a></li>
+                <li><a href="/admin/players.html">Players</a></li>
+                <li><a href="/admin/matches.html">Matches</a></li>
+                <li><a href="/admin/stats.html">Stats</a></li>
+                <li><a href="/admin/logout.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="card">
+                <h2 class="section-title">Player Statistics</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Matches Played</th>
+                            <th>Runs Scored</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>50</td>
+                            <td>2000</td>
+                        </tr>
+                        <!-- Add more rows as necessary -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2 class="section-title">Upcoming Matches</h2>
+                <p>No matches scheduled.</p>
+                <button class="button">Add Match</button>
+            </div>
+
+            <div class="card">
+                <h2 class="section-title">Recent Activities</h2>
+                <p>No recent activities.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            © 2024 Your Company. All rights reserved.
+        </footer>
+    </div>
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

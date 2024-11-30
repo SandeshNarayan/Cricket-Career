@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/premium.css"> <!-- Link to your CSS file -->
+    <title>Admin Home - Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            Admin Home Dashboard
+        </header>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="admin-players.html">Players</a></li>
+                <li><a href="admin-matches.html">Matches</a></li>
+                <li><a href="admin-stats.html">Statistics</a></li>
+                <li><a href="admin-teams.html">Teams</a></li>
+                <li><a href="admin-settings.html">Settings</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="card">
+                <h2 class="section-title">Welcome to the Admin Dashboard!</h2>
+                <p>Here you can manage players, view statistics, and oversee all matches.</p>
+                <button class="button" onclick="location.href='admin-players.html'">Manage Players</button>
+                <button class="button" onclick="location.href='admin-matches.html'">View Matches</button>
+                <button class="button" onclick="location.href='admin-stats.html'">View Statistics</button>
+            </div>
+
+            <div class="card">
+                <h2 class="section-title">Latest Updates</h2>
+                <ul>
+                    <li>New player added: John Doe</li>
+                    <li>Match scheduled: Team A vs Team B on 2024-12-10</li>
+                    <li>Player stats updated for last week</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 class="section-title">Quick Actions</h2>
+                <button class="button" onclick="location.href='create-player.html'">Create New Player</button>
+                <button class="button" onclick="location.href='create-match.html'">Schedule New Match</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            © 2024 Your Company. All rights reserved.
+        </footer>
+    </div>
+    <script src="home.js"></script>
+
+</body>
+</html>

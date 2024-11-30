@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Profile - Cricket Career</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS for styling -->
+</head>
+<body>
+    <header class="top-bar">
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="player-profile">
+            <h1 id="player-name">Player Name: John Doe</h1>
+            <div class="player-info">
+                <h2>Profile Information</h2>
+                <p><strong>Age:</strong> 25</p>
+                <p><strong>Position:</strong> Batsman</p>
+                <p><strong>Country:</strong> India</p>
+                <p><strong>Team:</strong> Royal Challengers Bangalore</p>
+            </div>
+
+            <div class="player-skills">
+                <h2>Skills</h2>
+                <ul id="skills-list">
+                    <li>Batting: <span id="batting-skill">80</span></li>
+                    <li>Bowling: <span id="bowling-skill">60</span></li>
+                    <li>Fielding: <span id="fielding-skill">75</span></li>
+                    <li>Fitness: <span id="fitness-skill">85</span></li>
+                    <li>Strategy: <span id="strategy-skill">90</span></li>
+                </ul>
+                <button id="edit-skills" class="btn">Edit Skills</button>
+            </div>
+
+            <div class="player-performance">
+                <h2>Performance Statistics</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th>Runs Scored</th>
+                            <th>Wickets Taken</th>
+                            <th>Catch</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody id="performance-table">
+                        <tr>
+                            <td>Match 1</td>
+                            <td>50</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2023</td>
+                        </tr>
+                        <tr>
+                            <td>Match 2</td>
+                            <td>30</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>2023</td>
+                        </tr>
+                        <!-- More matches can be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cricket Career. All rights reserved.</p>
+    </footer>
+
+    <script src="player.js"></script> <!-- Link to your JavaScript for player functionalities -->
+</body>
+</html>
+

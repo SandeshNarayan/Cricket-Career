@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Ball Simulation</title>
+    <script type="module">
+        import ProbabilityCalculator from './probability.js';
+        import { player } from './playerData/player.js';
+
+        // Initialize the Probability Calculator with the player's data
+        const calculator = new ProbabilityCalculator(player);
+
+        function simulateBall() {
+            const format = 'T20'; // Set format (T20, ODI, Test)
+            const runsScored = 100;
+            const wicketsTaken = 2;
+            const oversLeft = 5;
+            const runsRequired = 40;
+            const targetRunRate = 8;
+
+            // Simulate the outcome of the ball
+            const outcome = calculator.simulateBallOutcome(format, runsScored, wicketsTaken, oversLeft, runsRequired, targetRunRate);
+
+            // Display the result
+            const resultDiv = document.getElementById('result');
+            if (outcome.result === 'runs') {
+                resultDiv.textContent = `Runs scored: ${outcome.runs}`;
+            } else if (outcome.result === 'wicket') {
+                resultDiv.textContent = `Wicket: ${outcome.description}`;
+            } else {
+                resultDiv.textContent = outcome.description;
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cricket Ball Simulation</h1>
+    <p>Click the button to simulate the outcome of one ball.</p>
+
+    <button onclick="simulateBall()">Bowl the Ball</button>
+
+    <div id="result"></div>
+
+</body>
+</html>

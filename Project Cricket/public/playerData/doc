@@ -1,0 +1,41 @@
+1. Introduction
+Welcome to the Cricket Simulation Game! In this game, you can create and manage a cricket team, simulate matches, and track player progress over seasons.
+
+2. Getting Started
+Installation: Clone the repository and install dependencies:
+bash
+Copy code
+git clone <repository-url>
+cd cricket-simulation-game
+npm install
+Running the Game: Start the application with:
+bash
+Copy code
+npm start
+3. Managing Your Team
+Creating Players: Players can be randomly generated or created manually. Each player has specific roles (Batsman, Bowler, Allrounder, Keeper) and skills.
+Team Composition: Ensure your team has a balanced mix of players. You need:
+At least 5 Batsmen
+At least 3 Bowlers
+1 Allrounder
+1 Keeper
+4. Simulating Matches
+Match Setup: Choose two teams to simulate a match.
+Match Outcomes: The game simulates the match based on player skills and probabilities. After the match, you can view the scorecard, statistics, and player performances.
+5. Understanding Player Skills
+Each player has skills in batting and bowling that affect match performance.
+Skills can be improved through training and match performance.
+Key Skills Include:
+Power Hitting: Affects boundary chances.
+Control: Reduces runs conceded in bowling.
+Precision: Affects strike rotation for batsmen.
+6. Achievements and Progression
+Players can earn achievements based on performance (e.g., scoring a century).
+Achievements lead to skill upgrades and better player attributes over time.
+7. FAQs
+How do I create a player? You can create players manually in the team management section or use the random generation feature.
+
+How do I simulate a match? Select two teams, and choose the "Simulate Match" option to start the match simulation.
+
+Can I save my progress? Yes, there’s a save feature that allows you to store your current game state.
+

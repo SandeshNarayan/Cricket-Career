@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="premium.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <div class="admin-menu">
+            <a href="/manage-users">Manage Users</a>
+            <a href="/view-reports">View Reports</a>
+            <a href="/settings">Settings</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <div class="admin-content">
+            <div class="alert alert-success">Welcome back, Admin!</div>
+
+            <h2>Manage Users</h2>
+            <button>Add New User</button>
+            <button>Ban User</button>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>JohnDoe</td>
+                        <td>john@example.com</td>
+                        <td>Player</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>JaneDoe</td>
+                        <td>jane@example.com</td>
+                        <td>Admin</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Cricket Career Admin Dashboard | <a href="/privacy">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
